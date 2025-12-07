@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kapcsolatfelvétel az egzotikus fagylalt blog szerzőjével.">
+    <meta name="author" content="Hajdu Benedek">
+    <title>Egzotikus Fagylalt Blog Kapcsolat</title>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+<div class="logo">
+    <img src="img/logo.png" alt="Fagylalt logó" class="logo-img">
+    Egzotikus Fagylalt Blog
+</div>
+    <nav class="main-nav">
+        <a href="main.html">Főoldal</a>
+        <a href="izek.html">Ízek</a>
+        <a href="kapcsolat.html" class="active">Kapcsolat</a>
+        <a href="calculator.html">Fagyi-kalkulátor</a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-heading">
+        <h1>Kapcsolat</h1>
+        <p>Írd meg a kedvenc egzotikus fagylaltodat vagy a saját receptedet!</p>
+    </section>
+
+    <section class="contact-section">
+        <form id="contactForm" novalidate>
+            <div class="form-row">
+                <label for="name">Név*</label>
+                <input type="text" id="name" name="name" placeholder="Teljes neved">
+                <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-row">
+                <label for="email">E-mail cím*</label>
+                <input type="email" id="email" name="email" placeholder="valami@pelda.hu">
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Telefonszám*</label>
+                <input type="tel" id="phone" name="phone" placeholder="+36 30 123 4567">
+                <span class="error-message" id="phoneError"></span>
+            </div>
+
+            <div class="form-row">
+                <label for="favorite">Kedvenc egzotikus íz*</label>
+                <select id="favorite" name="favorite">
+                    <option value="">-- Válassz egy ízt --</option>
+                    <option value="mango">Mangó chili</option>
+                    <option value="wasabi">Wasabi fagylalt</option>
+                    <option value="lavender">Levendulás méz</option>
+                    <option value="coconut">Kókusz lime</option>
+                    <option value="other">Egyéb (Írd le lent!)</option>
+                </select>
+                <span class="error-message" id="favoriteError"></span>
+            </div>
+
+            <div class="form-row">
+                <label for="lastDate">Mikor kóstoltál utoljára különleges fagyit?*</label>
+                <input type="date" id="lastDate" name="lastDate">
+                <span class="error-message" id="dateError"></span>
+            </div>
+
+            <div class="form-row">
+                <p>Mennyire szereted az egzotikus ízeket?</p>
+                <label>
+                    <input type="radio" name="loveLevel" value="kicsit">
+                    Kicsit
+                </label>
+                <label>
+                    <input type="radio" name="loveLevel" value="nagyon">
+                    Nagyon
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Üzenet / recept leírása*</label>
+                <textarea id="message" name="message" rows="5" placeholder="Írd le az élményed vagy a receptet."></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
+
+            <div class="form-row checkbox-row">
+                <label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Szeretnék hírlevelet kapni egzotikus fagylalt receptekről
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn">Üzenet elküldése</button>
+            </div>
+
+            <p id="formSuccess" class="success-message"></p>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2025 Egzotikus Fagylalt Blog Készítette: Hajdu Benedek</p>
+</footer>
+</body>
+</html>

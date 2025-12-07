@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Egzotikus fagylalt árkalkulátor">
+    <meta name="author" content="Hajdu Benedek">
+    <title>Egzotikus Fagylalt Blog Fagyi kalkulátor</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+   <script src="js/fagyicalc.js"defer></script>
+</head>
+<body>
+<header class="site-header">
+<div class="logo">
+    <img src="img/logo.png" alt="Fagylalt logó" class="logo-img">
+    Egzotikus Fagylalt Blog
+</div>
+    <nav class="main-nav">
+            <a href="main.html">Főoldal</a>
+            <a href="izek.html">Ízek</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+            <a href="calculator.html" class="active">Fagyi-kalkulátor</a>
+    </nav>
+</header>
+
+<main>
+    <section class="page-heading">
+        <h1>Fagylalt árkalkulátor</h1>
+        <p>Válaszd ki a gombócok számát, a tölcsért és a feltéteket, majd számold ki a várható árat.</p>
+    </section>
+
+    <section class="calculator-box">
+     
+        <div class="form-row">
+            <label for="scoops">Gombócok száma (1–5):</label>
+            <input type="number" id="scoops" min="1" max="5" value="1">
+        </div>
+
+ 
+        <div class="form-row">
+            <p>Tölcsér típusa:</p>
+
+            <label>
+                <input type="radio" name="cone" value="classic" checked>
+                Klasszikus (0 Ft)
+            </label>
+
+            <label>
+                <input type="radio" name="cone" value="chocolate">
+                Csokis (+150 Ft)
+            </label>
+
+            <label>
+                <input type="radio" name="cone" value="cup">
+                Pohár (+100 Ft)
+            </label>
+        </div>
+
+
+        <div class="form-row">
+            <p>Feltétek:</p>
+
+            <label>
+                <input type="checkbox" id="topFruit">
+                Friss gyümölcs (+200 Ft)
+            </label>
+
+            <label>
+                <input type="checkbox" id="topNuts">
+                Pirított magvak (+250 Ft)
+            </label>
+
+            <label>
+                <input type="checkbox" id="topSyrup">
+                Szósz / öntet (+150 Ft)
+            </label>
+        </div>
+
+        <div class="form-row">
+            <button type="button" id="calcButton" class="btn">Ár kiszámítása</button>
+        </div>
+
+
+        <div id="calcResult" class="calc-result">
+            A fagylalt becsült ára itt fog megjelenni.
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2025 Egzotikus Fagylalt Blog • Készítette: Hajdu Benedek</p>
+</footer>
+
+
+</body>
+</html>
